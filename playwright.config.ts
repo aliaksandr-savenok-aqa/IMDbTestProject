@@ -13,7 +13,7 @@ export default defineConfig({
   ],
   use: {
     baseURL: 'https://www.imdb.com',
-    headless: true,
+    headless: false,
     launchOptions: {
       args: ['--start-maximized'], 
     },
