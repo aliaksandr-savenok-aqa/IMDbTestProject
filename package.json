@@ -1,0 +1,42 @@
+{
+  "name": "imdbtestproject",
+  "version": "1.0.0",
+  "description": "IMDb Test Automation Framework using Playwright with TypeScript and Page Object Model",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:movie-search": "playwright test tests/movie-search.spec.ts",
+    "test:top250": "playwright test tests/top250-movies.spec.ts",
+    "test:chrome": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:all-browsers": "playwright test --project=chromium --project=firefox --project=webkit",
+    "report": "playwright show-report",
+    "report:open": "npx playwright show-report",
+    "install:browsers": "playwright install",
+    "install:deps": "playwright install-deps",
+    "test:smoke": "playwright test --grep=\"@smoke\"",
+    "test:regression": "playwright test --grep=\"@regression\"",
+    "clean:reports": "rm -rf playwright-report test-results",
+    "clean:all": "rm -rf playwright-report test-results node_modules package-lock.json",
+    "setup": "npm install && playwright install"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "automation",
+    "testing",
+    "imdb",
+    "page-object-model",
+    "e2e"
+  ],
+  "author": "Test Automation Framework",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.6.2"
+  }
+}
